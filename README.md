@@ -26,7 +26,7 @@ onIdle.commands: {
 
 Use `onIdle.delay` to change the delay after which the commands are triggered. The value is specified in milliseconds. The default delay is 1 second.
 
-The position of the status bar button can be configured using `onIdle.buttonAlignment` and `onIdle.buttonPriority`.
+The position of the status bar button can be configured using `onIdle.buttonAlignment` and `onIdle.buttonPriority`. The icon itself can be changed with `onIdle.buttonIcon`.
 
 ## Installing
 

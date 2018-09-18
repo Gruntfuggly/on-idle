@@ -3,7 +3,7 @@
     "displayName": "On Idle",
     "description": "Trigger commands when you stop typing",
     "icon": "icon.png",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "Gruntfuggly",
     "repository": "https://github.com/Gruntfuggly/on-idle",
     "engines": {
@@ -33,7 +33,7 @@
             "properties": {
                 "onIdle.commands": {
                     "type": "object",
-                    "markdownDescription": "Mappings of file extensions to commands to be triggered. [https://github.com/Gruntfuggly/on-idle](Read more...)",
+                    "markdownDescription": "Mappings of file extensions to commands to be triggered. [Read more...](https://github.com/Gruntfuggly/on-idle#configuration)",
                     "default": {}
                 },
                 "onIdle.delay": {
@@ -43,7 +43,7 @@
                 },
                 "onIdle.buttonIcon": {
                     "type": "string",
-                    "markdownDescription": "The [https://octicons.github.com/](octicon) to use for the status bar button",
+                    "markdownDescription": "The [octicon](https://octicons.github.com/) to use for the status bar button",
                     "default": "watch"
                 },
                 "onIdle.buttonAlignment": {
