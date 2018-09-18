@@ -1,0 +1,69 @@
+{
+    "name": "on-idle",
+    "displayName": "On Idle",
+    "description": "Trigger commands when you stop typing",
+    "icon": "icon.png",
+    "version": "0.0.1",
+    "publisher": "Gruntfuggly",
+    "repository": "https://github.com/Gruntfuggly/on-idle",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "onIdle.enable",
+                "title": "On Idle: Enable"
+            },
+            {
+                "command": "onIdle.disable",
+                "title": "On Idle: Disable"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "On Idle",
+            "properties": {
+                "onIdle.commands": {
+                    "type": "object",
+                    "markdownDescription": "Mappings of file extensions to commands to be triggered. [https://github.com/Gruntfuggly/on-idle](Read more...)",
+                    "default": {}
+                },
+                "onIdle.delay": {
+                    "type": "number",
+                    "description": "The delay in milliseconds before triggering commands",
+                    "default": 1000
+                },
+                "onIdle.buttonIcon": {
+                    "type": "string",
+                    "markdownDescription": "The [https://octicons.github.com/](octicon) to use for the status bar button",
+                    "default": "watch"
+                },
+                "onIdle.buttonAlignment": {
+                    "type": "string",
+                    "description": "Alignment of the status bar button",
+                    "enum": [
+                        "Left",
+                        "Right"
+                    ],
+                    "default": "Right"
+                },
+                "onIdle.buttonPriority": {
+                    "type": "integer",
+                    "description": "Position priority of the status bar button",
+                    "default": 0
+                }
+            }
+        }
+    },
+    "devDependencies": {
+        "vscode": "^1.0.0"
+    }
+}
