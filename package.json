@@ -3,7 +3,7 @@
     "displayName": "On Idle",
     "description": "Trigger commands when you stop typing",
     "icon": "icon.png",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "Gruntfuggly",
     "repository": "https://github.com/Gruntfuggly/on-idle",
     "engines": {

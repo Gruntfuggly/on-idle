@@ -1,3 +1,6 @@
+# v0.0.3 - 2018-09-12
+- Check for editor before checking document version
+
 # v0.0.2 - 2018-09-18
 - Fix configuration links
 
