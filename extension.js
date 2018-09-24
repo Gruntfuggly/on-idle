@@ -28,17 +28,23 @@ function activate( context )
 
     function doCommands()
     {
+        function doNextCommand()
+        {
+            if( extensionConfig.commands.length > 0 )
+            {
+                var command = extensionConfig.commands.shift();
+                vscode.commands.executeCommand( command ).then( doNextCommand );
+            }
+        }
+
         timer = undefined;
 
         var extension = getExtension();
-        var commands = vscode.workspace.getConfiguration( 'onIdle' ).get( 'commands', {} )[ extension ];
+        var extensionConfig = vscode.workspace.getConfiguration( 'onIdle' ).get( 'commands', {} )[ extension ];
 
-        if( commands && commands.enabled === true )
+        if( extensionConfig && extensionConfig.enabled === true )
         {
-            commands.commands.map( function( command )
-            {
-                vscode.commands.executeCommand( command );
-            } );
+            doNextCommand();
         }
     }
 
@@ -132,7 +138,6 @@ function activate( context )
 
     context.subscriptions.push( vscode.workspace.onDidChangeTextDocument( function( editor )
     {
-        // var editor = vscode.window.activeTextEditor;
         if( editor && editor.document )
         {
             var currentHash = hash( editor.document.getText() );
